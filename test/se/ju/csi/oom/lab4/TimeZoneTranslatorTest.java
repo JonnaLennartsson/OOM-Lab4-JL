@@ -19,22 +19,22 @@ public class TimeZoneTranslatorTest {
 	@Test
 	public void testShiftTimeZone() {
 		
-		DateTime myTime = new DateTime(2018, 10, 3, 10, 17, 00);
-		DateTime test1 = new DateTime(0, 0, 0, 0, 0, 0);
+		DateTime myTime = new DateTime(2018, 10, 3, 10, 17);
+		DateTime test1 = new DateTime(0, 0, 0, 0, 0);
 		int frmOffset = 1;
 		int tOffset = 9;
 		
 		
 		test1 = TimeZoneTranslator.shiftTimeZone(myTime, frmOffset, tOffset);	
-		assertEquals("Fail, not equals", "2018-10-03 18:17:00", test1.toString());
+		assertEquals("Fail, not equals", "2018-10-03 18:17", test1.toString());
 		
 	}
 
 	@Test
 	public void testShiftEventTimeZone() {
 		
-		DateTime startTime = new DateTime(2018,12,31,00,00,00);
-		DateTime endTime = new DateTime(2018,12,31,23,59,00);
+		DateTime startTime = new DateTime(2018,12,31,00,00);
+		DateTime endTime = new DateTime(2018,12,31,23,59);
 		Person jonna = new Person("Jonna Lennartsson");
 		Person joel = new Person("Joel olofsson");
 		Place jonkoping = new Place("Jönköping", 57.7559194,14.047828,11.00);
@@ -51,8 +51,8 @@ public class TimeZoneTranslatorTest {
 
 		
 		Event thisIsExpected = new Event("new Years Eve", 
-				new DateTime(2018,12,31,8,00,00),
-				new DateTime(2019, 1, 1, 7, 59, 00),
+				new DateTime(2018,12,31,8,00),
+				new DateTime(2019, 1, 1, 7, 59),
 				new HashSet<>(Arrays.asList(jonna, joel)),
 				jonkoping);
 		
