@@ -13,9 +13,9 @@ public class DateTimeTest {
 
 	@Test
 	public void testToString() {
-		String testString = "1991-09-10 11:00:00"; 
+		String testString = "1991-09-10 11:00"; 
 		
-		DateTime jonnasDayOfBirth = new DateTime(1991,9,10,11,0,0);
+		DateTime jonnasDayOfBirth = new DateTime(1991,9,10,11,0);
 		
 	
 		assertEquals("Fail, not equals", testString, jonnasDayOfBirth.toString());
@@ -23,7 +23,7 @@ public class DateTimeTest {
 
 	@Test
 	public void testDateTimeString() {
-		String testString = "1991-09-10 11:00:00"; 
+		String testString = "1991-09-10 11:00"; 
 		
 		DateTime jonnasDayOfBirth = new DateTime(testString);
 		
